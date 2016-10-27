@@ -9,42 +9,25 @@
 	window.addEventListener("load", init); // #3
 	function init()
 	{
+		document.getElementById("sortButton").addEventListener("click", sortNames);
+		
 		// #4
 		var names = ["Shaun", "Adam", "Sarah", "Grant", "Bob"];
-
-		document.getElementById("namestuff").addEventListener("click", sortNames);
-		
 		createTable();
-		names.sortNames();
-	}
-	
-	function createTable()	// #5
-	{
-		// there is no way to access names here since it's in the scope of init()
-		// gotta fix that :)
-		for(var i=0; i<names.length; i++)
+
+		function createTable()	// #5
 		{
-			/* Not supposed to hard code the names.  thats what the purpose of the assignment is!  
-				Learn how to do things without all sorts of hard-coded functionality
-				
-			<tr><td>Shaun</td></tr>
-			<tr><td>Adam</td></tr>
-			<tr><td>Sarah</td></tr>
-			<tr><td>Grant</td></tr>
-			<tr><td>Bob</td></tr>
-			*/
-			
-			var thisLineOfHtml = "<tr><td>" + names[i] + "</tr></td>";
-			document.getElementById("list").innerHTML += thisLineOfHtml;
+			for(var i=0; i<names.length; i++)
+			{
+				var thisLineOfHtml = "<tr><td>" + names[i] + "</td></tr>";
+				document.getElementById("list").innerHTML += thisLineOfHtml;
+			}
+		}
+		function sortNames()
+		{
+			names.sort();
 		}
 	}
-	
-	function sortNames();
-	{
-		// what is shoppingList?
-		shoppingList.sort();
-	}
-
 </script>
 
 </head>
@@ -55,7 +38,7 @@
 	
 	<!-- #2 -->
 	<table id="list">	
-		<!-- add innerHTML here dynamically -->
+		<!-- names will be put here -->
 	</table>
 
 </body>
