@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title> Assignment 2 </title>
+<script>
+
+	window.addEventListener("load", init);
+	function init()
+	{
+		var names = ["Shaun", "Adam", "Sarah", "Grant", "Bob"];
+
+		function createTable()
+		{
+			for(var i=0; i<names.length; i++)
+			{
+				<tr><td>Shaun</td></tr>
+				<tr><td>Adam</td></tr>
+				<tr><td>Sarah</td></tr>
+				<tr><td>Grant</td></tr>
+				<tr><td>Bob</td></tr>
+
+				document.getElementById("list").innerHTML += "<li>" + names[i] + "</li>";
+			}
+
+			
+		}
+	}
+
+</script>
+
+</head>
+
+<body>
+
+	<button id=namestuff> Sort </button>
+
+	<ul id="list"></ul>
+
+
+</body>
+</html>
