@@ -11,28 +11,29 @@
 	{
 		var names = ["Shaun", "Adam", "Sarah", "Grant", "Bob"];
 
-		function createTable()
-		{
-			for(var i=0; i<names.length; i++)
-			{
-				<tr><td>Shaun</td></tr>
-				<tr><td>Adam</td></tr>
-				<tr><td>Sarah</td></tr>
-				<tr><td>Grant</td></tr>
-				<tr><td>Bob</td></tr>
-
-				document.getElementById("list").innerHTML += "<li>" + names[i] + "</li>";
-			}
-
-			
-		}
-
 		document.getElementById("namestuff").addEventListener("click", sortNames);
 		
-		function sortNames();
+		createTable();
+	}
+	
+	function createTable()
+	{
+		for(var i=0; i<names.length; i++)
 		{
-			shoppingList.sort();
+			<tr><td>Shaun</td></tr>
+			<tr><td>Adam</td></tr>
+			<tr><td>Sarah</td></tr>
+			<tr><td>Grant</td></tr>
+			<tr><td>Bob</td></tr>
+
+			document.getElementById("list").innerHTML += "<li>" + names[i] + "</li>";
 		}
+	}
+	
+	function sortNames();
+	{
+		// what is shoppingList?
+		shoppingList.sort();
 	}
 
 </script>
