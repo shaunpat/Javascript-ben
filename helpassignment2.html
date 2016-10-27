@@ -1,45 +1,46 @@
+
 <!doctype html>
 
 <html>
-<head>
-<meta charset="utf-8">
-<title> Assignment 2 </title>
-<script>
-
-	window.addEventListener("load", init); // #3
-	function init()
-	{
-		document.getElementById("sortButton").addEventListener("click", sortNames);
-		
-		// #4
-		var names = ["Shaun", "Adam", "Sarah", "Grant", "Bob"];
-		createTable();
-
-		function createTable()	// #5
-		{
-			for(var i=0; i<names.length; i++)
+	<head>
+	<meta charset="utf-8">
+	<title> Assignment 2 </title>
+		<script>
+			window.addEventListener("load", init); // #3
+			function init()
 			{
-				var thisLineOfHtml = "<tr><td>" + names[i] + "</td></tr>";
-				document.getElementById("list").innerHTML += thisLineOfHtml;
+				document.getElementById("sortButton").addEventListener("click", sortNames);
+				
+				// #4
+				var names = ["Shaun", "Adam", "Sarah", "Grant", "Bob"];
+				createTable();
+
+				function createTable()	// #5
+				{
+					document.getElementById("list").innerHTML = "";
+
+					for(var i=0; i<names.length; i++)
+					{
+						var thisLineOfHtml = "<tr><td>" + names[i] + "</td></tr>";
+						document.getElementById("list").innerHTML += thisLineOfHtml;
+					}
+				}
+				function sortNames()
+				{
+					names.sort();
+					createTable();
+				}
 			}
-		}
-		function sortNames()
-		{
-			names.sort();
-		}
-	}
-</script>
+		</script>
+	</head>
 
-</head>
+	<body>
+		<button id="sortButton"> Sort </button> <!-- #1 -->
+		
+		<!-- #2 -->
+		<table id="list" style="background-color: #ff22ff;">	
+			<!-- names will be put here -->
+		</table>
 
-<body>
-
-	<button id="sortButton"> Sort </button> <!-- #1 -->
-	
-	<!-- #2 -->
-	<table id="list">	
-		<!-- names will be put here -->
-	</table>
-
-</body>
+	</body>
 </html>
