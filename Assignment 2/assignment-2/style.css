@@ -1,0 +1,102 @@
+*:focus { outline: none; }
+@media screen and (max-width: 991px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+html, body { min-height: 100%; }
+
+html {
+  background: #f0f0f0;
+  color: #999;
+  font: normal 10px/1.5 Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: none;
+  color: inherit;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  max-width: 100%;height:auto;
+
+}
+
+button {
+  background: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: #000;
+}
+
+h2 {
+  color: #2f93eb;
+}
+
+h3 {
+  color: #2079c7;
+}
+
+main {
+  padding: 50px;
+}
+
+nav, footer {
+  background-color: #165994;
+  color: #fff;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+nav a {
+  padding: 10px;
+}
+
+#services img {
+  border-radius: 8px;
+  float: right;
+  padding: 40px;
+}
+
+.hidden-desktop {
+  display: none;
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+.row {
+  padding: 10px 0;
+}
+
+.row::after, section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.column {
+  float: left;
+}
+
+.one-third {
+  width: 30%;
+  padding-right: 3.33%;
+}
