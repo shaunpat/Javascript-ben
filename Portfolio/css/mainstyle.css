@@ -1,0 +1,31 @@
+.logo {
+	top: 25px;
+	position: absolute;
+	right: 10px;
+	color: #da4724;
+}
+html, body {
+	background-color: #87CEFA;
+}
+header.menu {
+	background-color: #000000;
+	width: 25px;
+}
+header nav ul li {
+	display: inline;
+}
+header nav ul li a {
+	font-size: 11px;
+	padding: 5px 0;
+    letter-spacing: 1px;
+    position: relative;
+    left: 85%; 
+}
+.about-content {
+	position: absolute;
+	top: 50%;
+}
+.latest-projects {
+	position: absolute;
+	top: 75%;
+}
